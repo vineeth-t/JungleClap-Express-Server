@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors =require('cors')
-//After setting up database use this 
+
 const products=require('./Routes/products.route.js')
 
 const wishlist=require('./Routes/wishlist.route.js')
