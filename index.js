@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 const cors =require('cors')
 
 const products=require('./Routes/products.route.js')
@@ -18,7 +19,4 @@ app.use('/cart',cart)
 app.get('/', (req, res) => {
   res.send('Hello Express app!')
 });
-
-app.listen(3000, () => {
-  console.log('server started');
-});
+app.listen(process.env.PORT || port, () => console.log(`Example app listening at http://localhost:${port}`));
